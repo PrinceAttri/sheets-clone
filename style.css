@@ -1,0 +1,240 @@
+/*css for everything*/
+* {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+/*css for page actions*/
+.page-actions-cont {
+    height: 3rem;
+    background-color: #218c74;
+    display: flex;
+    align-items: flex-end;
+    padding-left: 1rem;
+}
+
+.page-actions-cont > *:hover {
+    cursor: pointer;
+}
+
+.page-action {
+    width: 3.5rem;
+    height: 2rem;
+    text-align: center;
+    color: #f1f2f6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.selected-page-action {
+    background-color: #f1f2f6;
+    color: #218c74;
+}
+
+/*css for cell properties*/
+.cellprop-actions-cont {
+    height: 3rem;
+    background-color: #ecf0f1;
+    display: flex;
+    align-items: center;
+    padding-left: 1rem;
+}
+
+.cellprop-actions-cont > * {
+    display: inline-block;
+    margin-right: 1rem;
+}
+
+.cellprop-actions-cont > *:hover {
+    cursor: pointer;
+}
+
+.color-prop > *:hover {
+    cursor: pointer;
+}
+
+.cellprop-actions-cont > select {
+    border: none;
+    border-radius: 2px;
+    outline: none;
+}
+
+.font-family-prop {
+    padding: 0.2rem;
+}
+
+.font-size-prop {
+    padding: 0.2rem;
+}
+
+.color-prop {
+    position: relative;
+}
+
+.color-prop > input {
+    /*hiding the color input and overlapping it onto the icons*/
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+/*css for formula and address bar*/
+.formula-actions-cont {
+    height: 2rem;
+    background-color: #ecf0f1;
+    padding-left: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.formula-actions-cont > * {
+    display: inline-block;
+    margin-right: 0.7rem;
+}
+
+.formula-actions-cont > input {
+    border: none;
+    outline: none;
+    height: 70%;
+}
+
+.address-bar {
+    width: 5rem;
+    text-align: center;
+}
+
+.formula-icon {
+    width: 1.2rem;
+}
+
+.formula-bar {
+    width: calc(100vw - 5rem - 0.7rem - 0.7rem - 0.7rem);
+}
+
+/*css for additional sheets at bottom*/
+.sheet-actions-cont {
+    background-color: #ecf0f1;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    gap: 1rem;
+}
+
+.sheet-actions-cont > * {
+    display: inline-block;
+}
+
+.sheet-add-icon {
+    width: 2vw;
+}
+
+.sheet-add-icon:hover {
+    cursor: pointer;
+}
+
+.sheets-folder-cont {
+    display: flex;
+    align-items: center;
+    height: 80%;
+    width: 5rem;
+    width: calc(100vw - 2vw);
+    overflow: auto;
+}
+
+.sheet-folder {
+    height: 80%;
+    text-decoration: underline;
+    font-weight: bold;
+    text-decoration-thickness: 3px;
+    font-size: 0.9rem;
+    /*background-color: lightblue;*/
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sheet-content {
+    width: 5rem;
+    /*background-color: lightgreen;*/
+}
+
+.sheet-content:hover {
+    cursor: pointer;
+}
+
+
+/*css for grid area*/
+.grid-cont {
+    height: calc(100vh - 3rem - 3rem - 2rem - 3rem); /*subtracting the heights of other 4 containers*/
+    position: relative;
+    overflow: scroll;
+    background-color: #ecf0f1;
+}
+
+.top-left-dummy-box {
+    height: 2rem;
+    width: 2rem;
+    background-color: #747d8c;
+    position: fixed;
+    z-index: 1;
+}
+
+.address-col-cont {
+    position: sticky;
+    top: 2rem;
+    left: 0;
+}
+
+.address-row-cont {
+    display: flex;
+    position: sticky;
+    top: 0;
+    left: 2rem;
+}
+
+.cells-cont {
+    position: absolute;
+    top: 0;
+    left: 2rem;
+}
+
+.address-col {
+    height: 2rem;
+    width: 2rem;
+    border: 1px solid #dfe4ea;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.address-row {
+    height: 2rem;
+    width: 5rem;
+    border: 1px solid #dfe4ea;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.row-cont {
+    display: flex;
+
+}
+
+.cell {
+    height: 2rem;
+    width: 5rem;
+    border: 1px solid #dfe4ea;
+    outline: none;
+}

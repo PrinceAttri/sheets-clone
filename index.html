@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="icon" href="./images/sheets.png">
+    <title>Sheets</title>
+</head>
+<body>
+    <!--div for page actions-->
+
+    <div class="page-actions-cont">
+        <div class="page-action">Home</div>
+        <div class="page-action selected-page-action">File</div>
+        <div class="page-action">Insert</div>
+        <div class="page-action">Layout</div>
+        <div class="page-action">Help</div>
+    </div>
+
+    <!--div for cell properties-->
+
+    <div class="cellprop-actions-cont">
+        <span class="material-icons copy" title="Copy">
+            content_copy
+        </span>
+
+        <span class="material-icons cut" title="Cut">
+            content_cut
+        </span>
+
+        <span class="material-icons paste" title="Paste">
+            content_paste
+        </span>
+
+        <select class="font-family-prop">
+            <option value="monospace">Monospace</option>
+            <option value="sans-serif">Sans-Serif</option>
+            <option value="fantasy">Fantasy</option>
+            <option value="cursive">Cursive</option>
+        </select>
+
+        <select class="font-size-prop">
+            <option value="14">14</option>
+            <option value="16">16</option>
+            <option value="18">18</option>
+            <option value="20">20</option>
+        </select>
+
+        <span class="material-icons bold" title="Bold">
+            format_bold
+        </span>
+
+        <span class="material-icons italic" title="Italic">
+            format_italic
+        </span>
+
+        <span class="material-icons underline" title="Underline">
+            format_underlined
+        </span>
+
+        <span class="left material-icons alignment" title="Left Align">
+            format_align_left
+        </span>
+
+        <span class="center material-icons alignment" title="Center Align">
+            format_align_center
+        </span>
+
+        <span class="right material-icons alignment" title="Right Align">
+            format_align_right
+        </span>
+
+        <div class="color-prop">
+            <span class="material-icons">
+                format_color_text
+            </span>
+            <input type="color" class="font-color-prop" title="Text Color">
+        </div>
+        
+        <div class="color-prop">
+            <span class="material-icons">
+                format_color_fill
+            </span>
+            <input type="color" class="background-color-prop" title="Cell Color">
+        </div>
+
+        <span class="material-icons download" title="Download Sheet">
+            download
+        </span>
+
+        <span class="material-icons upload" title="Upload Sheet">
+            upload
+        </span>
+        
+    </div>
+
+    <!--div for formula & address bar-->
+
+    <div class="formula-actions-cont">
+        <input type="text" readonly class="address-bar">
+
+        <img class="formula-icon" src="https://img.icons8.com/ios/50/formula-fx.png" alt="formula-fx"/>
+
+        <input type="text" class="formula-bar">
+    </div>
+
+    <!--div for the grids-->
+
+    <div class="grid-cont">
+        <div class="top-left-dummy-box"></div>
+
+        <!--represents row number but name is col-->
+        <div class="address-col-cont"></div>
+        
+        <div class="cells-cont">
+            <!--represents col name(A-Z) but name is row-->
+            <div class="address-row-cont"></div>
+        </div>
+    </div>
+
+    <!--div for additional sheets at bottom-->
+    
+    <div class="sheet-actions-cont">
+        <div class="sheet-add-icon">
+            <span class="material-icons">
+                post_add
+            </span>
+        </div>
+        
+        <div class="sheets-folder-cont">
+        </div>
+    </div>
+
+
+
+    <script src="./grid.js" charset="UTF-8"></script>
+    <script src="./cyclic-path-trace.js" charset="UTF-8"></script>
+    <script src="./cycle-validation.js" charset="UTF-8"></script>
+    <script src="./sheets-handling.js" charset="UTF-8"></script>
+    <script src="./cell-properties.js" charset="UTF-8"></script>
+    <script src="./formula.js" charset="UTF-8"></script>
+    <script src="./cut-copy-paste.js" charset="UTF-8"></script>
+    <script src="./open-save.js" charset="UTF-8"></script>
+</body>
+</html>
